@@ -6,6 +6,7 @@
     "start": "node ./dist/index.js --inspect",
     "build": "tsc -p .",
     "dev": "cross-env NODE_OPTIONS='--inspect' node dist/index.js",
+    "seed": "tsx seed.ts",
     "deploy": "wrangler deploy --minify src/index.ts"
   },
   "keywords": [],

@@ -61,23 +61,24 @@ const Demo = () => {
           {successData ? (
             <div className="flex flex-col items-center text-center">
               <p className="font-bold">
-                {successData.score > 0.95 ? (
+                {successData.score > 0.9 ? (
                   <span>
                     🚨🚨😱😱 OH GOD, VERY BIG PROFANITY DETECTED!! 🚨🚨😱😱{" "}
                   </span>
                 ) : successData.score > 0.9 ? (
                   <span>🚨😱 BIG PROFANITY DETECTED!! 🚨😱 </span>
-                ) : successData.score > 0.88 ? (
+                ) : successData.score > 0.85 ? (
                   <span>🚨 PROFANITY DETECTED!! 🚨 </span>
-                ) : successData.score >= 0.85 ? (
+                ) : successData.score >= 0.8 ? (
                   <span>😱 PRETTY SURE THIS IS A PROFANITY 😱</span>
-                ) : successData.score < 0.85 ? (
+                ) : successData.score < 0.8 ? (
                   <span>Crispy clean input, no profanities :)) 👍👍</span>
                 ) : null}
               </p>
 
               <p className="text-sm text-zinc-700">
-                score (higher is worse): {successData.score.toFixed(3)}
+                score (higher is worse, Max is 1):{" "}
+                {successData.score.toFixed(3)}
               </p>
             </div>
           ) : (
