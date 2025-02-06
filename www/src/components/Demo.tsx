@@ -65,13 +65,13 @@ const Demo = () => {
                   <span>
                     🚨🚨😱😱 OH GOD, VERY BIG PROFANITY DETECTED!! 🚨🚨😱😱{" "}
                   </span>
-                ) : successData.score > 0.9 ? (
+                ) : successData.score > 0.95 ? (
                   <span>🚨😱 BIG PROFANITY DETECTED!! 🚨😱 </span>
-                ) : successData.score > 0.85 ? (
+                ) : successData.score > 0.9 ? (
                   <span>🚨 PROFANITY DETECTED!! 🚨 </span>
-                ) : successData.score >= 0.8 ? (
+                ) : successData.score >= 0.85 ? (
                   <span>😱 PRETTY SURE THIS IS A PROFANITY 😱</span>
-                ) : successData.score < 0.8 ? (
+                ) : successData.score < 0.85 ? (
                   <span>Crispy clean input, no profanities :)) 👍👍</span>
                 ) : null}
               </p>
